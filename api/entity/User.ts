@@ -4,10 +4,10 @@ import { Field, ObjectType } from "type-graphql";
 
 @ObjectType({ description: "User" })
 export class User {
-  @Field()
+  @Field({ complexity: 1 })
   readonly _id: ObjectId;
 
-  @Field()
+  @Field({ complexity: 1 })
   @Property({ required: true })
   email: string;
 
