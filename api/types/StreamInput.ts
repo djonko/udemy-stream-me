@@ -1,10 +1,10 @@
-import { InputType, Field } from "type-graphql";
+import { InputType, Field, ID } from "type-graphql";
 import { ObjectId } from "mongoose";
-import { Stream } from "entity/Stream";
+import { Stream } from "../entity/Stream";
 
 @InputType()
 export class StreamInput implements Partial<Stream> {
-  @Field({ nullable: true })
+  @Field(() => ID, { nullable: true })
   id?: ObjectId;
 
   @Field()

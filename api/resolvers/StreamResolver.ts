@@ -1,8 +1,8 @@
-import { Stream, StreamModel } from "entity/Stream";
-import { User, UserModel } from "entity/User";
-import { isAuth } from "middleware/isAuth";
+import { Stream, StreamModel } from "../entity/Stream";
+import { User, UserModel } from "../entity/User";
+import { isAuth } from "../middleware/isAuth";
 import { ObjectId } from "mongoose";
-import { ObjectIdScalar } from "schema/object-id.scalar";
+import { ObjectIdScalar } from "../schema/object-id.scalar";
 import {
   Arg,
   Ctx,
@@ -13,8 +13,8 @@ import {
   Root,
   UseMiddleware,
 } from "type-graphql";
-import { MyContext } from "types/Mycontext";
-import { StreamInput } from "types/StreamInput";
+import { MyContext } from "../types/Mycontext";
+import { StreamInput } from "../types/StreamInput";
 
 @Resolver(() => Stream)
 export class StreamResolver {
@@ -30,7 +30,7 @@ export class StreamResolver {
   streams(@Ctx() ctx: MyContext) {
     // 2. display all stream for the current user
     return StreamModel.find(<Stream>{
-      autor: ctx.res.locals.userId,
+      author: ctx.res.locals.userId,
     }).lean<Stream>();
   }
 
@@ -43,7 +43,7 @@ export class StreamResolver {
     //3. create a new user's stream
     const stream = new StreamModel({
       ...streamInput,
-      autor: ctx.res.locals.userId,
+      author: ctx.res.locals.userId,
     } as Stream);
 
     await stream.save();
@@ -80,8 +80,8 @@ export class StreamResolver {
     return true;
   }
 
-  @FieldResolver()
+  @FieldResolver(() => User)
   async author(@Root() stream: Stream): Promise<User | null> {
-    return await UserModel.findById(stream.autor);
+    return await UserModel.findById(stream.author);
   }
 }
