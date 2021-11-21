@@ -8,7 +8,7 @@ export default function About() {
         <Typography variant="h4" component="h1" gutterBottom>
           Next.js exemple
         </Typography>
-        <Link href="/">
+        <Link href="/" passHref>
           <Button variant="contained" color="primary">
             Go to the index page
           </Button>
