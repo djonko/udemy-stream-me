@@ -1,0 +1,12 @@
+query streams {
+  streams {
+    _id
+    title
+    description
+    url
+    author {
+      email
+      _id
+    }
+  }
+}

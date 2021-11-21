@@ -1,0 +1,12 @@
+mutation editStream($streamInput: StreamInput!) {
+  editStream(input: $streamInput) {
+    _id
+    title
+    description
+    url
+    author {
+      email
+      _id
+    }
+  }
+}
