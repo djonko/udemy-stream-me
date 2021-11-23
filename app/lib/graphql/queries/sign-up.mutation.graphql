@@ -1,4 +1,4 @@
-mutation register($registerInput: AuthInput!) {
+mutation signUp($registerInput: AuthInput!) {
   register(input: $registerInput) {
     user {
       _id
