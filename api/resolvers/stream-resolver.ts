@@ -1,8 +1,8 @@
-import { Stream, StreamModel } from "entity/Stream";
-import { User, UserModel } from "entity/User";
-import { isAuth } from "middleware/isAuth";
+import { Stream, StreamModel } from "../entity/stream";
+import { User, UserModel } from "../entity/user";
+import { isAuth } from "../middleware/is-auth";
 import { ObjectId } from "mongoose";
-import { ObjectIdScalar } from "schema/object-id.scalar";
+import { ObjectIdScalar } from "../schema/object-id.scalar";
 import {
   Arg,
   Ctx,
@@ -13,8 +13,8 @@ import {
   Root,
   UseMiddleware,
 } from "type-graphql";
-import { MyContext } from "types/Mycontext";
-import { StreamInput } from "types/StreamInput";
+import { MyContext } from "../types/my-context";
+import { StreamInput } from "../types/stream-input";
 
 @Resolver(() => Stream)
 export class StreamResolver {

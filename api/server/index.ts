@@ -5,7 +5,7 @@ import "reflect-metadata";
 import "process";
 import createSchema from "../schema";
 import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-core";
-import createSession from "session";
+import createSession from "../session";
 
 import nextApp from "@stream-me/app";
 

@@ -2,11 +2,11 @@ import { GraphQLSchema } from "graphql";
 import { buildSchema } from "type-graphql";
 import { ObjectId } from "mongodb";
 import path from "path";
-import { UserResolver } from "../resolvers/UserResolver";
-import { AuthResolver } from "../resolvers/AuthResolver";
-import { StreamResolver } from "../resolvers/StreamResolver";
-import { TypegooseMiddleware } from "middleware/typegoose";
-import { ObjectIdScalar } from "schema/object-id.scalar";
+import { UserResolver } from "../resolvers/user-resolver";
+import { AuthResolver } from "../resolvers/auth-resolver";
+import { StreamResolver } from "../resolvers/stream-resolver";
+import { TypegooseMiddleware } from "../middleware/typegoose";
+import { ObjectIdScalar } from "../schema/object-id.scalar";
 
 //build TypeGraphQl executable schema
 

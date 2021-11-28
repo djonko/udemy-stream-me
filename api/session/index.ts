@@ -1,7 +1,7 @@
 import { connect } from "mongoose";
 import "process";
 import "reflect-metadata";
-import "server/env";
+import "../server/env";
 
 export default async function createSession() {
   const MONGO_URL = process.env.MONGO_URL || "";
