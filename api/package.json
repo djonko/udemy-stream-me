@@ -2,7 +2,6 @@
   "name": "@stream-me/api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "start": "ts-node --transpile-only server/index.ts",
     "dev": "nodemon server/index.ts"

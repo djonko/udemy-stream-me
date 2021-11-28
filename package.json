@@ -7,7 +7,9 @@
   "scripts": {
     "build": "yarn workspace @stream-me/app run build",
     "start": "yarn workspace @stream-me/api run start",
-    "dev": "yarn workspace @stream-me/api run dev"
+    "dev": "yarn workspace @stream-me/api run dev",
+    "heroku-prebuild": "export NPM_CONFIG_PRODUCTION=false; export NODE_ENV=; NPM_CONFIG_PRODUCTION=false NODE_ENV=development npm install --only=dev --dev",
+    "heroku-postbuild": "export NPM_CONFIG_PRODUCTION=true; export NODE_ENV=production"
   },
   "workspaces": [
     "api",
