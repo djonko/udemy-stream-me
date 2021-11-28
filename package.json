@@ -13,6 +13,9 @@
     "api",
     "app"
   ],
+  "engines": {
+    "node": "16.6.2"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/djonko/udemy-stream-me.git"
