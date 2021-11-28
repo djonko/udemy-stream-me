@@ -10,6 +10,7 @@ import createSession from "../session";
 import nextApp from "@stream-me/app";
 
 const port = process.env.PORT || "8000";
+console.log(`port is ${port}`);
 const handler = nextApp.getRequestHandler();
 async function createServer() {
   try {
