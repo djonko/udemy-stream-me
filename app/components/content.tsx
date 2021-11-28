@@ -22,12 +22,14 @@ export default function Video({ url }: VideoProps) {
 
 const useStyles = makeStyles((theme: Theme) => ({
   container: {
-    paddingTop: "56.25%",
+    //overflow: "hidden",
+    /* 16:9 aspect ratio */
+    //paddingTop: "56.25%",
     position: "relative",
   },
   iframe: {
     border: "0",
-    height: "100%",
+    height: "500px",
     left: 0,
     top: 0,
     width: "100%",

@@ -13,7 +13,9 @@ export default function Posts(props: Props) {
   return (
     <Grid container className={styles.container} spacing={4}>
       {streams &&
-        streams.map((post) => <PostItem post={post} styles={styles} />)}
+        streams.map((post) => (
+          <PostItem post={post} styles={styles} key={post._id} />
+        ))}
     </Grid>
   );
 }
