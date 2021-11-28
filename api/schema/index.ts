@@ -5,8 +5,8 @@ import path from "path";
 import { UserResolver } from "../resolvers/UserResolver";
 import { AuthResolver } from "../resolvers/AuthResolver";
 import { StreamResolver } from "../resolvers/StreamResolver";
-import { TypegooseMiddleware } from "../middleware/typegoose";
-import { ObjectIdScalar } from "./object-id.scalar";
+import { TypegooseMiddleware } from "middleware/typegoose";
+import { ObjectIdScalar } from "schema/object-id.scalar";
 
 //build TypeGraphQl executable schema
 

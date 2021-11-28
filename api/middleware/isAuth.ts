@@ -1,5 +1,5 @@
 import { MiddlewareFn } from "type-graphql";
-import { MyContext } from "../types/Mycontext";
+import { MyContext } from "types/Mycontext";
 import jwt from "jsonwebtoken";
 
 const APP_SECRET = process.env.SESSION_SECRET || "aslkdfjoiq12312";

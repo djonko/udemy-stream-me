@@ -1,8 +1,8 @@
 import { prop as Property, getModelForClass } from "@typegoose/typegoose";
 import { ObjectId } from "mongoose";
 import { Field, ID, ObjectType } from "type-graphql";
-import { User } from "./User";
-import { Ref } from "../types/Ref";
+import { User } from "entity/User";
+import { Ref } from "types/Ref";
 
 @ObjectType({ description: " Stream embedded post content " })
 export class Stream {

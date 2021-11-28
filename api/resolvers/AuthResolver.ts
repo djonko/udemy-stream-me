@@ -1,9 +1,9 @@
 import { Arg, Mutation, Resolver } from "type-graphql";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
-import { UserModel } from "../entity/User";
-import { AuthInput } from "../types/AuthInput";
-import { UserResponse } from "../types/UserResponse";
+import { UserModel } from "entity/User";
+import { AuthInput } from "types/AuthInput";
+import { UserResponse } from "types/UserResponse";
 
 @Resolver()
 export class AuthResolver {
