@@ -7,7 +7,10 @@ import createSchema from "../schema";
 import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-core";
 import createSession from "../session";
 
+import nextApp from "@stream-me/app";
+
 const port = process.env.PORT || "8000";
+const handler = nextApp.getRequestHandler();
 async function createServer() {
   try {
     // 1. create a mongoose connection
@@ -16,7 +19,6 @@ async function createServer() {
     const app = express();
 
     const corsOptions = {
-      origin: "http://localhost:3000",
       credentials: true, // for cookies or authentication purpose
     } as CorsOptions;
 
@@ -41,6 +43,11 @@ async function createServer() {
     });
     await apolloServer.start();
     apolloServer.applyMiddleware({ app, cors: corsOptions });
+
+    //create next app request handler
+    //prepare the next app
+    await nextApp.prepare();
+    app.get("*", (req, res) => handler(req, res));
 
     // start the server
     app.listen({ port }, () => {

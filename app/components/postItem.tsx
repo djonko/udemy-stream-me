@@ -20,7 +20,7 @@ export default function PostItem(props: Props) {
   const { post, styles } = props;
   return (
     <Grid item key={post._id} xs={12} md={6}>
-      <Link href={`/streams/${post._id}`}>
+      <Link href={`/streams/${post._id}`} passHref>
         <CardActionArea component="a" href="#">
           <Card className={styles.card}>
             <div className={styles.cardDetails}>

@@ -24,7 +24,7 @@ export default function Header({ darkState, handleThemeChange }) {
     .filter((link) => link)
     .map(({ label, href }) => {
       return (
-        <Link href={href} key={href}>
+        <Link href={href} key={href} passHref>
           <Button color="inherit">{label}</Button>
         </Link>
       );
@@ -35,7 +35,7 @@ export default function Header({ darkState, handleThemeChange }) {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            <Link href={HOME_LOGIN_PATH}>
+            <Link href={HOME_LOGIN_PATH} passHref>
               <LinkText href="" color="inherit">
                 Stream.me
               </LinkText>

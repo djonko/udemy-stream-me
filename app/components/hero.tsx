@@ -32,7 +32,7 @@ export default function Hero({ stream }: Props) {
             </Typography>
             <Box pb={1} />
             {showEdit && (
-              <Link href={`edit/${stream._id}`}>
+              <Link href={`edit/${stream._id}`} passHref>
                 <Button variant="outlined" color="inherit">
                   Edit Stream
                 </Button>
