@@ -1,4 +1,12 @@
 {
+  "ts-node": {
+    "transpileOnly": true,
+    "require": [
+      // set this so you dont need to use ts-node -r
+      "typescript-transform-paths/register",
+      "tsconfig-paths/register"
+    ]
+  },
   "compilerOptions": {
     "target": "es6",
     "module": "commonJS",
@@ -20,7 +28,8 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "resolveJsonModule": true,
-    "baseUrl": "."
+    "baseUrl": ".",
+    "rootDir": "."
   },
   "exclude": ["node_modules", "./generated"],
   "include": ["./**/*.ts", "**/*.ts"]
