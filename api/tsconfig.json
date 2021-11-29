@@ -19,8 +19,9 @@
     "esModuleInterop": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "resolveJsonModule": true
-    //"baseUrl": "."
+    "resolveJsonModule": true,
+    "rootDir": "./",
+    "baseUrl": "./"
   },
   "exclude": ["node_modules", "./generated"],
   "include": ["./**/*.ts"]
