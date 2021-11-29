@@ -9,7 +9,8 @@
     "build2": "yarn workspace @stream-me/app run build && yarn workspace @stream-me/api run build",
     "start": "yarn workspace @stream-me/api run start",
     "start2": "yarn workspace @stream-me/api run web",
-    "dev": "yarn workspace @stream-me/api run dev"
+    "dev": "yarn workspace @stream-me/api run dev",
+    "heroku-prebuild": "yarn install"
   },
   "workspaces": [
     "api",

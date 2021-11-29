@@ -3,7 +3,7 @@
     "transpileOnly": true,
     "require": [
       // set this so you dont need to use ts-node -r
-      "typescript-transform-paths/register",
+      "typescript-transform-paths",
       "tsconfig-paths/register"
     ]
   },
