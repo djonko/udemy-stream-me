@@ -2,7 +2,7 @@ import { Resolver, Query, UseMiddleware, Arg, Ctx } from "type-graphql";
 import { ObjectId } from "mongoose";
 import { MyContext } from "../types/my-context";
 import { isAuth } from "../middleware/is-auth";
-import { User, UserModel } from "entity/user";
+import { User, UserModel } from "../entity/user";
 import { ObjectIdScalar } from "../schema/object-id.scalar";
 
 @Resolver(() => User)
