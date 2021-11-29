@@ -1,8 +1,8 @@
-import { Stream, StreamModel } from "entity/stream";
-import { User, UserModel } from "entity/user";
-import { isAuth } from "middleware/is-auth";
+import { Stream, StreamModel } from "../entity/stream";
+import { User, UserModel } from "../entity/user";
+import { isAuth } from "../middleware/is-auth";
 import { ObjectId } from "mongoose";
-import { ObjectIdScalar } from "schema/object-id.scalar";
+import { ObjectIdScalar } from "../schema/object-id.scalar";
 import {
   Arg,
   Ctx,

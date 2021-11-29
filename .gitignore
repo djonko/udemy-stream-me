@@ -4,3 +4,4 @@ node_modules
 .next
 **/types.ts
 **/types.d.ts
+dist
